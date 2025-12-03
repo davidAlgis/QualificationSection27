@@ -1,0 +1,280 @@
+\documentclass[a4paper,11pt]{article}
+
+% --- Chargement des paquets de base ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry} % Marges optimisées pour les 15 pages max
+\usepackage{lmodern}
+\usepackage{microtype} % Améliore la typographie
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{booktabs} % Pour de beaux tableaux
+\usepackage{longtable} % Pour les tableaux sur plusieurs pages
+\usepackage{array}
+\usepackage{pdflscape} % Pour mettre le tableau d'enseignement en paysage
+\usepackage{fancyhdr}
+\usepackage{fontawesome5} % Pour les icônes (email, web, etc.)
+\usepackage{tcolorbox} % Pour les boites de mise en valeur
+\usepackage{colortbl}
+
+
+\usepackage{xcolor}
+% Copie de vos définitions pour compilation immédiate
+\definecolor{cornflower}{rgb}{0.55,0.79,0.90} 
+\definecolor{blueGreen}{rgb}{0.12,0.61,0.73} 
+\definecolor{oxfordBlue}{rgb}{0,0.18,0.27} 
+\definecolor{tiffanyBlue}{rgb}{0,0.77,0.69}
+\definecolor{uclaGold}{rgb}{1,0.71,0} 
+\definecolor{orange}{rgb}{1,0.52,0} 
+\definecolor{sunny}{rgb}{0.97,0.96,0.44}
+\definecolor{deepSpaceSparkle}{rgb}{0.30, 0.37, 0.42}
+\definecolor{gainsboro}{rgb}{0.86,0.86,0.86} 
+\definecolor{whiteLavender}{rgb}{0.90,0.90,0.98} 
+\definecolor{heliotropeMagenta}{rgb}{0.69,0.09,0.78} 
+\definecolor{shockingPink}{rgb}{1.0,0.41,0.92} 
+\definecolor{jellyBean}{rgb}{0.85,0.31,0.29} 
+\definecolor{bittersweet}{rgb}{1.0,0.43,0.34} 
+\definecolor{temptress}{rgb}{0.24,0.12,0.19}
+\definecolor{shadow}{rgb}{0.54,0.44,0.33}
+\definecolor{teaGreen}{rgb}{0.85,0.94,0.7} 
+\definecolor{apple}{rgb}{0.41,0.71,0.27} 
+\definecolor{fernGreen}{rgb}{0.35,0.47,0.28}
+
+% --- Personnalisation des titres ---
+\usepackage{titlesec}
+
+% Titre de section : OxfordBlue, souligné
+\titleformat{\section}
+{\color{oxfordBlue}\normalfont\Large\bfseries}
+{\thesection}{1em}{}[\titlerule]
+
+% Titre de sous-section : BlueGreen
+\titleformat{\subsection}
+{\color{blueGreen}\normalfont\large\bfseries}
+{\thesubsection}{1em}{}
+
+% Titre de sous-sous-section : DeepSpaceSparkle
+\titleformat{\subsubsection}
+{\color{deepSpaceSparkle}\normalfont\normalsize\bfseries}
+{\thesubsubsection}{1em}{}
+
+% --- Configuration des listes ---
+\setlist[itemize]{label=\color{uclaGold}\textbullet, leftmargin=*}
+
+% --- En-tête et pied de page ---
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\color{deepSpaceSparkle}\small Candidature Qualification MCF - Section 27}
+\rhead{\color{deepSpaceSparkle}\small \textbf{Prénom NOM}}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{cornflower}\leaders\hrule height \headrulewidth\hfill}}
+
+% --- Commandes utiles ---
+\newcommand{\cnuKey}[1]{\textbf{\textcolor{oxfordBlue}{#1}}} % Pour les mots clés CNU
+\newcommand{\publiTag}[1]{\textcolor{jellyBean}{\textbf{[#1]}}} % Pour tagger les 3 publis majeures
+
+\begin{document}
+
+% --- TETE DU DOCUMENT ---
+\begin{center}
+    {\huge \textbf{\textcolor{oxfordBlue}{Dossier de candidature à la qualification MCF}}}\\
+    \vspace{0.2cm}
+    {\Large Section 27 - Informatique}\\
+    \vspace{0.5cm}
+\end{center}
+
+\begin{tcolorbox}[colback=whiteLavender,colframe=blueGreen,title=Identité du candidat]
+    \begin{tabular}{p{0.6\textwidth} p{0.35\textwidth}}
+        \textbf{\Large Prénom NOM} &  \\
+        Actuellement : \textit{Poste actuel (ex: ATER, Post-doctorant)} & \faEnvelope \ \href{mailto:votre.email@univ.fr}{votre.email@univ.fr} \\
+        Laboratoire : \textit{Nom du Labo, Université} & \faGlobe \ \href{https://votre-site-web.fr}{votre-site-web.fr} \\
+        & \faPhone \ +33 6 00 00 00 00
+    \end{tabular}
+\end{tcolorbox}
+
+% --- DOMAINES DE RECHERCHE (IMPORTANT POUR LE CNU) ---
+\section*{Domaines de recherche (Nomenclature CNU 27)}
+\noindent
+\textbf{Domaine principal :} \cnuKey{Code X - Intitulé Principal} \\
+\textbf{Domaines secondaires :} Code Y - Intitulé ; Code Z - Intitulé. \\
+\textbf{Mots-clés :} \textit{Intelligence Artificielle, Génie Logiciel, Réseaux, ...}
+
+% --- 1. PARCOURS UNIVERSITAIRE ---
+\section{Parcours Universitaire}
+
+\begin{description}
+    \item[20XX] \textbf{Doctorat en Informatique} -- \textit{Université de XXX}
+    \begin{itemize}
+        \item \textbf{Titre :} \textit{"Titre de la thèse"}
+        \item \textbf{Directeur(s) :} Prénom Nom (Labo), Prénom Nom (Labo)
+        \item \textbf{Rapporteurs :} Prénom Nom (Affiliation), Prénom Nom (Affiliation)
+        \item \textbf{Jury :} Prénom Nom (Président), Prénom Nom (Examinateur)...
+        \item \textit{Mention (si applicable) / Prix de thèse éventuel.}
+    \end{itemize}
+    
+    \item[20XX] \textbf{Master en Informatique} (ou Diplôme d'ingénieur) -- \textit{Université de XXX}
+    \begin{itemize}
+        \item Spécialité XXX.
+        \item \textbf{Stage de M2 :} "Titre", encadré par XXX.
+    \end{itemize}
+    
+    \item[20XX] \textbf{Licence Informatique} -- \textit{Université de XXX}
+\end{description}
+
+% --- 2. EXPERIENCES PROFESSIONNELLES ---
+\section{Expériences Professionnelles}
+
+\begin{description}
+    \item[20XX -- 20XX] \textbf{Intitulé du poste} (ATER, Post-doc, Ingénieur...) -- \textit{Lieu/Établissement}
+    \begin{itemize}
+        \item Statut : CDD / CDI.
+        \item Description succincte : \textit{Recherche sur le projet X, Enseignement en L1/L2...}
+    \end{itemize}
+    
+    \item[20XX -- 20XX] \textbf{Doctorant Contractuel} -- \textit{Lieu/Établissement}
+    \begin{itemize}
+        \item Mission d'enseignement (64h/an) ou Recherche seule.
+    \end{itemize}
+\end{description}
+
+% --- 3. ACTIVITÉS D'ENSEIGNEMENT ---
+\section{Activités d'enseignement}
+
+\subsection{Synthèse des enseignements réalisés}
+
+% Le tableau est large, on utilise small pour que ça rentre, ou landscape
+% La consigne demande explicitement ces colonnes.
+\begin{footnotesize}
+\begin{longtable}{|p{1.2cm}|c|p{1.8cm}|p{1.2cm}|c|p{2cm}|c|c|c|p{2.5cm}|}
+    \hline
+    \rowcolor{oxfordBlue} 
+    \textcolor{white}{\textbf{Statut}} & 
+    \textcolor{white}{\textbf{Année}} & 
+    \textcolor{white}{\textbf{Établissement}} & 
+    \textcolor{white}{\textbf{Public}} & 
+    \textcolor{white}{\textbf{Niv.}} & 
+    \textcolor{white}{\textbf{Matière}} & 
+    \textcolor{white}{\textbf{H (eqTD)}} & 
+    \textcolor{white}{\textbf{Eff.}} & 
+    \textcolor{white}{\textbf{Nature}} & 
+    \textcolor{white}{\textbf{Responsabilités}} \\
+    \hline
+    \endhead
+    
+    % --- Ligne Exemple ---
+    ATER & 2023-24 & Univ. Nantes & Info & L1 & Algo & 32 & 150 & TP & Création sujets \\
+    \hline
+    Doc & 2022-23 & Univ. Lyon & MIAGE & M1 & Base de données & 24 & 30 & TD & Resp. module \\
+    \hline
+    % --- Ajoutez vos lignes ici ---
+    
+    \hline
+    \multicolumn{6}{|r|}{\textbf{TOTAL}} & \textbf{XXX h} & & & \\
+    \hline
+\end{longtable}
+\end{footnotesize}
+
+\subsection{Description des enseignements et démarche pédagogique}
+\textit{(5 à 15 lignes recommandées)}
+Décrivez ici votre approche. 
+\begin{itemize}
+    \item \textbf{Matière A :} Explication du contenu, innovations pédagogiques (classe inversée, projet, etc.), supports créés (lien vers GitHub ou Moodle si pertinent).
+    \item \textbf{Matière B :} ...
+    \item \textbf{Outils :} Utilisation de Docker, Jupyter Notebooks, plateformes de correction automatique...
+\end{itemize}
+
+\subsection{Projet d'enseignement}
+\textit{(Texte synthétique précisant ce que vous êtes prêt à assurer)}
+Compte tenu de mon parcours en [Domaine], je suis en mesure d'intervenir sur les enseignements de socle commun (Algorithmique, Programmation Objet, Bases de Données) ainsi que sur des enseignements spécialisés tels que [Vos Spécialités] en Master.
+Je souhaite développer... [Votre vision].
+
+% --- 4. ACTIVITÉS DE RECHERCHE ---
+\section{Activités de recherche}
+
+\subsection{Thématiques et Résultats majeurs}
+\textit{Ne faites pas seulement une liste, racontez une histoire scientifique.}
+Mes travaux de recherche se situent à l'intersection de A et B. Ils visent à résoudre le problème Z.
+
+\begin{itemize}
+    \item \textbf{Axe 1 : Titre de l'axe.} Description des résultats théoriques ou méthodologiques. \textit{Lien avec publications [1, 3]}.
+    \item \textbf{Axe 2 : Titre de l'axe.} Description des expérimentations, mesures, évaluations. \textit{Lien avec publications [2]}.
+\end{itemize}
+
+\subsection{Production logicielle et Valorisation}
+\begin{itemize}
+    \item \textbf{Nom du Logiciel} : Description. URL du dépôt. (Licence, langage, impact).
+    \item Participation à des projets open-source, brevets, jeux de données mis à disposition.
+\end{itemize}
+
+\subsection{Encadrement doctoral et scientifique}
+\textit{Précisez votre taux d'encadrement et le devenir des étudiants.}
+\begin{itemize}
+    \item \textbf{2023 (6 mois) - Stage M2} : Prénom Nom, \textit{"Sujet"}. Co-encadrement à 50\% avec X. Résultat : Publication [4].
+    \item \textbf{2022 (4 mois) - PFE Ingénieur} : Prénom Nom.
+\end{itemize}
+
+\subsection{Rayonnement et Visibilité}
+\begin{itemize}
+    \item \textbf{Organisation :} Membre du comité d'organisation de la conférence X.
+    \item \textbf{Comités de programme (PC) :} Reviewer pour Conf X, Conf Y.
+    \item \textbf{Collaborations :} Séjour scientifique au Labo Z (Pays), collaboration avec l'entreprise W.
+    \item \textbf{Médiation :} Fête de la science, interventions en lycée.
+\end{itemize}
+
+% --- 5. PUBLICATIONS ---
+\section{Liste des publications}
+
+\begin{tcolorbox}[colback=sunny!20, colframe=uclaGold, title=Note aux rapporteurs]
+Les \textbf{3 publications jointes} au dossier sont signalées par le symbole \publiTag{PDF}.
+Les taux d'acceptation et les indicateurs de notoriété (Core, Quartile) sont précisés pour chaque entrée.
+\end{tcolorbox}
+
+% Utilisez cette structure pour chaque publi pour respecter les demandes du CNU 27
+% Arguments : Auteurs, Année, Titre, Conférence/Revue, Type (Long/Court), Pages, Preuves/Métriques
+
+\subsection*{Revues internationales avec comité de lecture (RI)}
+
+\begin{enumerate}
+    \item \textbf{V. Nom}, A. Autre. (2023). \textit{Titre de l'article de revue}. \textbf{Nom de la Revue (Journal)}, Vol X, pp 10-24.
+    \\ \textcolor{deepSpaceSparkle}{\small \faInfoCircle \ Facteur d'impact : 3.5 (Q1). 20 pages. DOI: xxx.xxx}
+    \\ \publiTag{PDF} \textit{Contribution : description de votre apport spécifique (obligatoire).}
+\end{enumerate}
+
+\subsection*{Conférences internationales avec comité de lecture (C-ACTI)}
+
+\begin{enumerate}[resume]
+    \item \textbf{V. Nom}, B. Collegue. (2022). \textit{Titre de l'article de conf}. Dans les actes de \textbf{Name of Conference (CONF 2022)}, Ville, Pays.
+    \\ \textcolor{deepSpaceSparkle}{\small \faInfoCircle \ CORE A. Taux d'acceptation : 18\%. Article long (12 pages). Lien vers les actes : http...}
+    \\ \publiTag{PDF} \textit{Contribution : J'ai réalisé l'implémentation et les preuves théoriques...}
+    
+    \item C. Auteur, \textbf{V. Nom}. (2021). ...
+\end{enumerate}
+
+\subsection*{Conférences nationales avec comité de lecture (C-ACTN)}
+...
+
+\subsection*{Autres (Workshops, Poster, Brevets, Thèse)}
+...
+
+% --- 6. RESPONSABILITÉS COLLECTIVES ---
+\section{Responsabilités collectives et administratives}
+
+\begin{itemize}
+    \item \textbf{2021 -- 2023 :} Représentant des doctorants au conseil de laboratoire. (Estimation : 10h/an).
+    \item \textbf{2022 :} Responsable de la mise en place du serveur de calcul de l'équipe.
+\end{itemize}
+
+% --- 7. ELEMENTS COMPLEMENTAIRES ---
+\section{Éléments complémentaires}
+\textit{Expliquez ici les trous dans le CV (congés parentaux, maladie), les parcours atypiques ou tout ce qui valorise le dossier.}
+
+\vspace{1cm}
+\begin{center}
+    \textit{Document rédigé le \today.}
+\end{center}
+
+\end{document}
